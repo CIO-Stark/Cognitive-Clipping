@@ -1,0 +1,10 @@
+[
+    { "source": "", "sentiment": { "label": "positive" }, "date": "2017-12-31" },
+    { "source": "", "sentiment": { "label": "negative" }, "date": "2017-10-15" },
+    { "source": "", "sentiment": { "label": "neutral" }, "date": "2017-04-03" },
+    { "source": "", "sentiment": { "label": "positive" }, "date": "2017-07-08" },
+    { "source": "", "sentiment": { "label": "negative" }, "date": "2017-09-15" },
+    { "source": "", "sentiment": { "label": "positive" }, "date": "2017-03-29" },
+    { "source": "", "sentiment": { "label": "negative" }, "date": "2017-02-10" },
+    { "source": "", "sentiment": { "label": "negative" }, "date": "2017-01-01" }
+]

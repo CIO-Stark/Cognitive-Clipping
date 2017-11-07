@@ -1,0 +1,51 @@
+$dark_theme_background: #1B2834;
+$dark_theme_text: #e3ecec;
+$dark_theme_date: #9fa7a7;
+$dark_theme_insights_background: #1c496d;
+
+.dark{
+    background-color: $dark_theme_background !important;
+/* TIMELINE WIDGET */
+    .timeline-tab ul{
+        border-bottom-color: $royal_blue;
+    }
+    .timeline-tab ul li a{
+        color: $light_blue !important;
+        border-bottom-color: $royal_blue !important;
+    }
+    .timeline-tab ul li:hover a{
+        color: $dirty_white !important;
+        border-bottom-color: $dark_theme_text !important;
+    }
+    .timeline-tab ul li.is-active a{
+        border-bottom-color: $light_blue !important;
+    }
+    .timeline-item{
+        color: $dark_theme_text;
+    }
+    .timeline-date{
+        color: $dark_theme_date;
+    }
+    span.source a{
+        color: $light_blue !important;
+    }
+/* INSIGHTS WIDGET */
+    .insights{
+        background-color: $dark_theme_insights_background !important;
+        h4{
+            color: $light_blue !important;
+        }
+
+        p {
+            color: $dirty_white;
+        }
+
+        .insight{
+            background-color: $dark_theme_background !important;
+            color: $dark_theme_text !important;
+            h1,h2,h3,h5{
+                color: $dark_theme_text !important;
+            }
+        }
+    }
+}

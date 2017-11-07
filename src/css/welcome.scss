@@ -1,0 +1,17 @@
+#welcome {
+    hr.hr-welcome {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 2px solid $light_blue;
+        padding: 0; 
+    }
+
+    .button {
+        border-radius: 0;
+    }
+
+    .container.main {
+        align-self: flex-start;
+    }
+}

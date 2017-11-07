@@ -1,0 +1,17 @@
+.rc-slider {
+    .rc-slider-rail {
+        background-color: #1c496d;
+    }
+
+    .rc-slider-track, .rc-slider-handle {
+        background-color: $light_blue;
+    }
+    
+    .rc-slider-handle {
+        border: 0;
+    }
+
+    .rc-slider-tooltip {
+        border-radius: 0 !important;
+    }
+}

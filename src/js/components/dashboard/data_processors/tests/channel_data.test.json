@@ -1,0 +1,11 @@
+[
+    { "source": "facebook", "sentiment": { "label": "positive" } },
+    { "source": "facebook", "sentiment": { "label": "neutral" } },
+    { "source": "facebook", "sentiment": { "label": "neutral" } },
+    { "source": "twitter", "sentiment": { "label": "positive" } },
+    { "source": "twitter", "sentiment": { "label": "negative" } },
+    { "source": "nodecrawler", "sentiment": { "label": "positive" } },
+    { "source": "nodecrawler", "sentiment": { "label": "positive" } },
+    { "source": "nodecrawler", "sentiment": { "label": "negative" } },
+    { "source": "nodecrawler", "sentiment": { "label": "negative" } }
+]

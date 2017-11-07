@@ -1,0 +1,184 @@
+.timeline {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+
+  .vertical-line {
+    position: absolute;
+    left: 7.5px;
+    width: 2px;
+    height: inherit;
+    background: $blue;
+  }
+
+  .timeline-container {
+    overflow: scroll;
+  }
+
+  .timeline-date {
+    margin-top: 10px;
+    margin-left: 29px;
+  }
+
+  .timeline-item {
+    position: relative;
+    min-height: 108px;
+    margin: 10px 5px 0 29px;
+    padding: 5px;
+    border: 2px solid $graffiti;
+    border-left: 8px solid $graffiti;
+    
+
+    &::before {
+      content: "\25CF ";
+      font-size: 26px;
+      position: absolute;
+      top: 15px;
+      left: -35px;
+      color: $graffiti;
+    }
+
+    .line {
+      width: 25px;
+      position: absolute;
+      left: -28px;
+      top: 10px;
+      z-index: -3;
+      color: $graffiti;
+    }
+
+    h3 {
+      margin: 2px 0;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 5px;
+      padding-right: 0.9em;
+
+      .snippet {
+        margin-bottom: 5px;
+      }
+    }
+
+    .key-words {
+      margin-bottom: 25px;
+    }
+
+    .gray {
+      color: darken($gray, 20%);
+    }
+
+    .bottom {
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      width: 99%;
+
+      .actions {
+        float: right;
+        margin: -2px 0;
+
+        .fa {
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        .ibm-icon {
+          font-size: 13px;
+          cursor: pointer;
+        }
+      }
+    }
+  
+    &.positive {
+      border: 2px solid $green;
+      border-left: 8px solid $green;
+
+      &::before {
+        color: $green;
+      }
+    }
+
+    &.negative {
+      border: 2px solid $pink;
+      border-left: 8px solid $pink;
+
+      &::before {
+        color: $pink;
+      }
+    }
+
+    &.neutral {
+      border: 2px solid $gray;
+      border-left: 8px solid $gray;
+
+      &::before {
+        color: $gray;
+      }
+    }
+
+  }
+
+  &:last-child {
+    margin-bottom: 5px;
+  }
+
+}
+
+.modal {
+    color: $dirty_white;
+
+    h3 {
+      color: $light_blue;
+      margin-top: 1rem;
+    }
+
+    .modal-content {
+      width: 100% !important;
+      margin: 0 5rem;
+    }
+
+    .hero {
+      width: 100% !important;
+      height: 90% !important;
+
+      .hero-body {
+        overflow: hidden;
+      }
+    }
+
+    .main {
+      padding: 0.9rem 0.9rem 0.9rem 1.3rem;
+      color: $graffiti;
+      overflow-y: scroll;
+      text-align: justify;
+      background-color: $dirty_white;
+
+      h3 {
+        color: $graffiti;
+      }
+
+      p {
+        padding: 0 !important;
+      }
+
+      .details {
+        font-size: 12px;
+      }
+    }
+    
+    .timeline-sidebar {
+      background: $bluemarine;
+
+      .correlation-response {
+        font-size: 12px;
+        padding: 0 0.4rem;
+      }
+      
+      .block-with-text {
+        margin-bottom: 15px;
+      }
+    }
+  }

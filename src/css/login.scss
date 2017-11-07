@@ -1,0 +1,12 @@
+.login {
+    background-color: $dark_blue !important;
+
+    .title, .label {
+        color: $dirty_white;
+    }
+
+    .compress {
+        max-width: 486px !important;
+        margin: 0 auto;
+    }
+}

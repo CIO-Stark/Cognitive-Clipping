@@ -1,0 +1,119 @@
+@import './colors.scss';
+@import './theme.dark.scss';
+@import './utils.scss';
+@import './welcome.scss';
+@import './form.scss';
+@import './navbar.scss';
+@import './widget.scss';
+@import './login.scss';
+@import './timeline.scss';
+@import './insights.scss';
+@import './dashboard_menus.scss';
+@import './toast.scss';
+@import './extra-fonts';
+@import './wordcloud.scss';
+@import 'node_modules/bulma/bulma.sass';
+@import '~ibm-icon-font/css/ibmicons.css';
+@import '~react-joyride/lib/react-joyride';
+@import '~rc-slider/assets/index.css';
+@import './date_slider';
+
+* {
+  font-family: Helvetica;
+}
+// Prevent Illegal Scroll Bar Styling 
+// More info:
+// https://stackoverflow.com/questions/9251354/css-customized-scroll-bar-in-div/14150577#14150577
+// https://www.w3.org/Style/Examples/007/scrollbars.en.html
+// body, html {
+//     scrollbar-face-color: ThreeDFace !important;
+//     scrollbar-shadow-color: ThreeDDarkShadow !important;
+//     scrollbar-highlight-color: ThreeDHighlight !important;
+//     scrollbar-3dlight-color: ThreeDLightShadow !important;
+//     scrollbar-darkshadow-color: ThreeDDarkShadow !important;
+//     scrollbar-track-color: Scrollbar !important;
+//     scrollbar-arrow-color: ButtonText !important;
+// }
+
+/* APP LOADING SCREEN */
+#dashboard-container{
+  min-height: 100%;
+}
+.loadingIcon{
+  width: 100% !important;
+  height: 100% !important;
+  background-color: $dark_blue;
+  img{
+    margin: 100px auto;
+    position: relative;
+  }
+}
+
+// background classes
+.bg_blue {
+  background: $dark_blue;
+  color: $dirty_white;
+}
+
+.bg_white {
+  background: $dirty_white;
+  color: $dark_blue;
+}
+
+.bg_gray {
+  background: $light_gray;
+}
+
+// .fixed-height{
+  // max-height: 225px;
+  // min-height: 225px;
+// }
+
+.fixed-height > ul{
+  max-height: 170px;
+  min-height: 170px;
+  overflow: scroll;
+}
+.bg_positive {
+  background: $green;
+}
+
+.bg_negative {
+  background: $pink;
+}
+
+.bg_neutral {
+  background: gray;
+}
+
+// text coloring classes
+.color-white{
+    color: $dirty_white;
+}
+
+.color-filter-blue{
+  color: $filter_blue;
+}
+
+.float-right{
+  float: right;
+}
+
+.tabs:not(:last-child) {
+  margin-bottom: 15px !important;
+}
+// @TODO fix the height
+.height-minus-nav {
+  padding-top: 52px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn-top-margin {
+    margin-top: 10px;
+}
+
+#dashboard-container {
+    background-color: $light_grey !important;
+}

@@ -1,0 +1,69 @@
+.insights {
+    background: $light_blue;
+    width: 100%;
+    height: 100%;
+    padding: 0.2rem;
+
+    h4, p {
+        word-break: break-all;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .tile.is-ancestor {
+        margin: 0 !important;
+
+        &:last-child {
+            margin-right: 0 !important;
+        }
+    }
+
+    .insight {
+        height: 173px !important;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin-right: 0.2rem;
+        box-sizing: border-box;
+        background-color: $light_grey;
+
+        &.notification {
+            border-radius: 0 !important;
+            // background-color: transparent !important;
+        }
+
+        // doughnut tile
+        &.sentiment-doughnut {
+            position: relative;
+
+            h2 {
+                position: relative;
+                bottom: 87px;
+            }
+
+            h5 {
+                position: absolute;
+                left: 15px;
+            }
+        }
+
+        // Most positive & negative container
+        &.most {
+            position: relative;
+
+            h2 {
+                border-bottom: 1px solid #eee;
+                margin-bottom: 1rem;
+                padding-bottom: 0.2rem;
+            }
+
+            span.expand {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                
+            }
+        }
+    }
+}

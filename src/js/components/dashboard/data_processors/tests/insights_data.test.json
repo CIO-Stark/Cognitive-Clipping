@@ -1,0 +1,89 @@
+[
+  {
+    "sentiment": {
+        "label": "positive",
+        "score": 0.3
+    },
+    "keywords": [
+      {
+        "text": "word1",
+        "relevance": 0.9
+      },
+      {
+        "text": "word2",
+        "relevance": 0.9
+      },
+      {
+        "text": "word3",
+        "relevance": 0.9
+      }
+    ]
+  },
+  {
+    "sentiment": {
+        "label": "positive",
+        "score": 0.5
+    },
+    "keywords": [
+      {
+        "text": "word1",
+        "relevance": 0.9
+      },
+      {
+        "text": "word2",
+        "relevance": 0.9
+      },
+      {
+        "text": "word3",
+        "relevance": 0.9
+      }
+    ]
+  },
+  {
+    "sentiment": {
+        "label": "negative",
+        "score": -0.22
+    },
+    "keywords": [
+      {
+        "text": "word1",
+        "relevance": 0.9
+      },
+      {
+        "text": "word3",
+        "relevance": 0.9
+      },
+      {
+        "text": "word4",
+        "relevance": 0.9
+      }
+    ]
+  },
+  {
+    "sentiment": {
+        "label": "negative",
+        "score": -0.4
+    },
+    "keywords": [
+      {
+        "text": "word1",
+        "relevance": 0.9
+      },
+      {
+        "text": "word1",
+        "relevance": 0.9
+      },
+      {
+        "text": "word5",
+        "relevance": 0.9
+      }
+    ]
+  },
+  {
+    "sentiment": {
+        "label": "neutral",
+        "score": 0
+    },
+    "keywords": []
+  }
+]

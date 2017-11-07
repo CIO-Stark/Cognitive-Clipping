@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'ibm-extra';
+  src:  url('../fonts/ibm-extra.eot?q4vfrs');
+  src:  url('../fonts/ibm-extra.eot?q4vfrs#iefix') format('embedded-opentype'),
+    url('../fonts/ibm-extra.ttf?q4vfrs') format('truetype'),
+    url('../fonts/ibm-extra.woff?q4vfrs') format('woff');
+    // url('../fonts/ibm-extra.svg?q4vfrs#ibm-extra') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i.ibm-icon-extra {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ibm-extra' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.dots-three-vertical:before {
+    content: "\e900";
+  }
+  
+  &.stats-dots:before {
+    content: "\e99b";
+  }
+  
+  &.stats-bars:before {
+    content: "\e99c";
+  }
+  
+  &.tree:before {
+    content: "\e9bc";
+  }
+  &.menu:before {
+    content: "\e9bd";
+  }
+  &.share:before {
+    content: "\ea82";
+  }
+}

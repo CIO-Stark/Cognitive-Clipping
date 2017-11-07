@@ -1,0 +1,10 @@
+#wordcloud {
+
+    span.wordcloud-item {
+        color: #7c8282;
+
+        &.selected {
+            color: #009BEF;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.vis-group-controls{
+    line-height: 30px;
+}
+    .vis-group-controls > div{
+        display: inline-block;
+        margin-left: 5px;
+        float: left;
+        color: #009BEF;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .vis-group-controls > div.inactive{
+        color: #B8C1C1;
+    }
+    .vis-group-controls > img{
+        display: inline-block;
+        cursor: pointer;
+        float: right;
+    }
+
+.vis-navigation > div:hover{
+    background-position: 0px 0px !important;
+    outline: none !important;
+    border-radius: 0px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.vis-navigation > div{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.vis-button
+ {
+     background-size:cover;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.vis-button.vis-right, .vis-button.vis-left, .vis-button.vis-up, .vis-button.vis-down{
+    display: none;    
+} 
+
+.vis-network{
+    position: absolute;
+    z-index: 0px;
+}
+
+#networkChart{
+  height: calc(100% - 31px);
+}
+.networkChart{
+  height: 100%;
+}

@@ -1,0 +1,18 @@
+$white: #F8FAFA;
+$dirty_white: #FBFCFC;
+$royal_blue: #175D8D; // for buttons
+$blue: #336E97;
+$bluemarine: #1C5E8B;
+$dark_blue: #1D364D; // background & icons
+$light_blue: #009BEF; // background & icons
+$light_gray: #E3C3C3; // navmenu background
+$gray: #B8C1C1;
+$light_grey: #eee;
+$green: #00BAA1; // positive sentiment
+$gray: #D0DADA; // neutral sentiment
+$pink: #DC267F; // negative sentiment
+$graffiti: #333;
+$filter_blue: #9dc3ef;
+
+// overwriting bulma's colors
+$primary: $royal_blue;

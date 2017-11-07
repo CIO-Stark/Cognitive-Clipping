@@ -1,0 +1,54 @@
+.nav {
+  width: 100%; // overwrite bulma's default, affecting it's behavior
+  position: fixed !important; // overwrite bulma's default, affecting it's behavior
+  color: $filter_blue !important;
+
+  .nav-item {
+    padding: 0.5rem !important;
+
+    img {
+      max-height: 1.1rem;
+    }
+
+    a {
+      margin-top: 0.2rem;
+      color: $filter_blue !important;
+
+      &:hover {
+        color: darken( $filter_blue, 50%) !important;
+      }
+    }
+
+    &.logo {
+      a {
+        color: $dirty_white !important;
+
+        &:hover {
+          color: $filter_blue !important;
+        }
+      }
+    }
+  }
+
+  .ibm-icon {
+    font-size: 25px;
+
+    &:hover {
+      color: lighten($filter_blue, 10%)
+    }
+  }
+
+  .ibm-icon-extra {
+    font-size: 22px;
+
+    &:hover {
+      color: lighten($filter_blue, 10%)
+    }
+  }
+
+  .colorIcon.active{
+  }
+  .colorIcon.inactive{
+    color: $light_blue !important;
+  }
+}

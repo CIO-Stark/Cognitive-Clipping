@@ -1,0 +1,56 @@
+.widget-container {
+  overflow-y: hidden;
+
+  .block {
+    // width: 100%;
+    // height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: 2;
+    background-color: #333;
+  }
+
+  .widget-header {
+        margin-bottom: 0.5rem;
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $light_blue;
+        }
+
+        .field {
+            float: right;
+        }
+  }
+
+  .widget-content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+// Widget Menu
+.widget-image {
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+
+  .icon {
+    position: absolute;
+    left: 38%;
+    top: 25%;
+    font-size: 5rem;
+  }
+
+  .label {
+    margin: 0.2rem 0;
+  }
+
+  &:hover {
+    color: $dirty_white !important;
+  }
+}

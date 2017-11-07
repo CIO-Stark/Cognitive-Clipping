@@ -1,0 +1,45 @@
+.sentiment-checkbox {
+  height: 36px;
+  width: 100%;
+  min-width: auto;
+  max-width: 200px;
+  display: inline-block;
+  border: 1px solid $royal_blue;
+
+  .check {
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+    cursor: pointer;
+    float:left;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .label {
+    display: inline-block;
+    height: 36px;
+    padding: 5px;
+    vertical-align: middle;
+    color: $dirty_white;
+  }
+}
+
+
+label.checkbox{
+    input{
+      margin-right: 10px !important;
+    }
+}
+label.checkbox:hover{
+  color: $light_blue !important
+}
+
+//
+.datepicker {
+  color: $royal_blue !important;
+}
+
+.help {
+  font-size: 0.75rem !important;
+}
