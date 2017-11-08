@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { requestInterceptor, responseInterceptor } from './auth';
 
-const API = 'https://presentation-cognitive-clipping-orchestrator.mybluemix.net';
+const API = 'https://cognitive-clipping-orchestrator.mybluemix.net';
 
 axios.interceptors.request.use(requestInterceptor);
 axios.interceptors.response.use(responseInterceptor);

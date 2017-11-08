@@ -23,15 +23,8 @@ class Filter extends Component {
         this.socialMediaProfileCounter = 2;
         this.filesProfileCounter = 0;
         this.state = {
-            date: [
-                { date: '', placeholder: 'Data Inicial', value: 'dateStart' }, 
-                { date: '', placeholder: 'Data Final', value: 'dateEnd' }
-            ],
-            sentiments: [
-                { value: 'positive', name: 'Positivo', checked: true }, 
-                { value: 'neutral', name: 'Neutro', checked: true }, 
-                { value: 'negative', name: 'Negativo', checked: true }
-            ],
+            date: [{ date: '', placeholder: 'Data Inicial', value: 'dateStart' }, { date: '', placeholder: 'Data Final', value: 'dateEnd' }],
+            sentiments: [{ value: 'positive', name: 'Positivo', checked: true }, { value: 'neutral', name: 'Neutro', checked: true }, { value: 'negative', name: 'Negativo', checked: true }],
             entities: [],
             contexts: [],
             articleProfile: { value: 'Artigos', checked: true },
@@ -42,8 +35,8 @@ class Filter extends Component {
                 { value: 'twitter', name: 'Twitter', checked: true },
                 { value: 'connections', name: 'Connections', checked: false }
             ],
-            // files: [],
-            // filesProfile: { value: 'Arquivos', checked: true },
+            files: [],
+            filesProfile: { value: 'Arquivos', checked: true },
             exclude: [],
             advanced: false
         };

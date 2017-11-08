@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const JWT_TOKEN = 'jwtToken';
 const USER_ROLE = 'userInfo';
-const API = 'https://presentation-cognitive-clipping-orchestrator.mybluemix.net/auth/login';
+const API = 'http://cognitive-clipping-orchestrator.mybluemix.net/auth/login';
 
 let user = null;
 

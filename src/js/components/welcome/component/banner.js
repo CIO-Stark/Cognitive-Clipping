@@ -14,7 +14,7 @@ const Banner = (props) => {
             </div>
             <div className='column margin-align-center'>
                 <h1 className="title is-1 color-white">Bem-Vindo!</h1>
-                <h3 className="subtitle is-3 color-white">Para começar selecione uma entidade.</h3>
+                <h3 className="subtitle is-3 color-white">Para começar selecione uma entidade, ou uma combinação de entidades com contexto e clique em analisar</h3>
             </div>
         </div>
     )

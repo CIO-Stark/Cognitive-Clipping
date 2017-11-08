@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { requestInterceptor, responseInterceptor } from './auth';
 
-const API = 'https://presentation-cognitive-clipping-orchestrator.mybluemix.net';
+const API = 'https://cognitive-clipping-orchestrator.mybluemix.net';
 const moment = require('moment');
 
 axios.interceptors.request.use(requestInterceptor);
@@ -30,7 +30,7 @@ var analyse = (filter) => {
 }
 
 var correlation = (filter) => {
-    const endpoint = 'https://presentation-cognitive-clipping-orchestrator.mybluemix.net/orchestrator/correlation';
+    const endpoint = 'https://cognitive-clipping-orchestrator.mybluemix.net/orchestrator/correlation';
     //const endpoint = 'http://localhost:6023/orchestrator/correlation';
 
     return new Promise(function (resolve, reject) {

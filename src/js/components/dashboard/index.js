@@ -511,9 +511,9 @@ export default class Dashboard extends Component {
 
     return (
       <div id="dashboard-container">
-        {/*<div className={'sidenav ' + (this.state.isSideMenuOpen ? 'is-open' : '')}>
+        <div className={'sidenav ' + (this.state.isSideMenuOpen ? 'is-open' : '')}>
           <Filter columnSize="is-12" data={this.state.filterState} newData={this.newData} />
-        </div>*/}
+        </div>
         <div className={'sidenav ' + (this.state.isDbpediaMenuOpen ? 'is-open' : '')}>
           <DbpediaMenu columnSize="is-12" dbpediaQuery={this.state.dbpediaQuery} menuOpen={this.state.isDbpediaMenuOpen} />
         </div>
