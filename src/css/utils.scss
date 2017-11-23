@@ -16,6 +16,10 @@
   margin-right: 0 !important; 
 }
 
+.should-scroll-x {
+    overflow-x: scroll;
+}
+
 // Multi line ellipsis
 /* styles for '...' */ 
 .block-with-text {

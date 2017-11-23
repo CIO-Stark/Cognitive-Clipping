@@ -569,6 +569,7 @@ class Filter extends Component {
                 filter.files.push(file._id);
             }
         });
+        filter.files = filter.files.length ? filter.files : undefined;
     
         // Exclude
 

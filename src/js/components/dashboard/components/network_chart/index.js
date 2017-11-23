@@ -109,22 +109,20 @@ class NetworkChart extends Component {
         let filledFilters = 0;
         let filtersKeysLen = Object.keys(sources).length;
         entries.some((entry, i) => {
-            // if (entry.level !== 1) {
-            //     return false;
-            // }
-
-            if (entry.group === 'relations') {
-                entry.group = entry.url;
-            }
-
-            let index = -1;
-            if (sources[entry.group] === false) {
-                filledFilters++;
-                sources[entry.group] = true;
-                index = indexOfObject(filterDefaults, entry.group, 'prop');
-                filter.push(filterDefaults[index]);
-
-                return filledFilters === filtersKeysLen;
+            if (entry.level !== 1) {
+                if (entry.group === 'relations') {
+                    entry.group = entry.url;
+                }
+    
+                let index = -1;
+                if (sources[entry.group] === false) {
+                    filledFilters++;
+                    sources[entry.group] = true;
+                    index = indexOfObject(filterDefaults, entry.group, 'prop');
+                    filter.push(filterDefaults[index]);
+    
+                    return filledFilters === filtersKeysLen;
+                }
             }
         });
 

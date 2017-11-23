@@ -6,98 +6,75 @@ import utils from '../../utils/utils';
 
 // Component
 import form from '../shared/form';
-import loading from '../../../images/loading.gif';
+import Loading from './loading';
 
 // Data
 import dbpedia from '../../data/dbpedia';
 import entity from '../../data/entity';
 
 
-import Joyride from 'react-joyride';
+const NO_RESULT = 'Não foi possível encontrar a descrição desta pesquisa. Por favor tente com outra entidade.';
 
 class DbpediaMenu extends Component {
     constructor(props) {
         super(props);
 
-        this.dbpediaDataCompare = { type: '', value: '' };
-        
         this.state = {
-            dbpediaQuery: { type: '', value: '' },
-            dbpediaData: { uri : '', genericDescription : '', ptDescription : '', enDescription : '', imgURL : ''}
+            query: { type: '', value: '' },
+            searchResult: {},
+            isLoading: true
         };
+    }
 
-        //this.createFields = this.createFields.bind(this);
+    componentWillReceiveProps (nextProps) {
+        if (nextProps.dbpediaQuery.value !== this.state.query.value) {
+            this.setState({ query: this.props.dbpediaQuery, searchResult: {}, isLoading: true });
+        }
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // console.log("props", this.props.dbpediaQuery, this.dbpediaDataCompare, prevProps, prevState);
-
-        if(this.dbpediaDataCompare.value !== this.props.dbpediaQuery.value){
-
-                dbpedia.getData(this.props.dbpediaQuery.value, this.props.dbpediaQuery.type).then(response => {
-                    console.log("dbpedia", response);
-                    this.setState({dbpediaData : response }); 
-                              
-                }).catch(erro =>{
-                    console.error("error or no data found while retrieving dbpedia data", erro);
-                    this.setState({})
-                }); 
-
-                this.dbpediaDataCompare = this.props.dbpediaQuery;
-
-            }
-        
-
+        if (prevProps.dbpediaQuery.value !== prevState.query.value) {
+            dbpedia(prevProps.dbpediaQuery.value, prevProps.dbpediaQuery.type)
+            .then(response => {
+                console.log('REsponse: ',response);
+                this.setState({ searchResult: response, isLoading: false });
+            })
+            .catch(error => {
+                console.log('Dbpedia error: ', error);
+                this.setState({ searchResult: {}, isLoading: false });
+            });
+        }
     }
-
-    createImgRow(){
-        return (
-                    <div className='column is-half is-offset-one-quarter'>
-                        {
-                            this.state.dbpediaData.imgURL ?
-                                <img src={this.state.dbpediaData.imgURL}/>
-                            : ''
-                        }
-                    </div>
-                    
-        )
-    }
-    createDescriptionRow(){
-        return (
-                    <div className='column is-12'>
-                            {this.state.dbpediaData.ptDescription ? 
-                                this.state.dbpediaData.ptDescription
-                                : 'Não foi possível encontrar a descrição desta pesquisa. Por favor tente com outra entidade.'
-                            }
-                    </div>
-                    
-        )
-    }
-
-
 
     render() {
-        const columnSize = this.props.columnSize ? this.props.columnSize : 'is-half';
-        const columnClasses = `column ${columnSize}`
+        const { imageURL, description } = this.state.searchResult;
+        const isLoading = this.state.isLoading;
+        let content = null;
+
+        if (!isLoading) {
+            if (description && description.pt) {
+                content = description.pt;
+            } else if (!description || !description.pt) {
+                content = NO_RESULT;
+            }
+        }
 
         return (
             <div className="container">
                 <div className='columns is-multiline'>
                     <div className='column is-12'>
-                        {
-                            this.props.dbpediaQuery.type ?
-                                <h4 className="title is-4 color-filter-blue">{this.props.dbpediaQuery.value}</h4>
-                            : <h4 className="title is-4 color-filter-blue">{this.props.dbpediaQuery.value}</h4>
-                        }
-                        
+                        <h4 className="title is-4 color-filter-blue">{ this.props.dbpediaQuery.value }</h4>
                     </div>
-                    {this.createImgRow()}
-                    {this.createDescriptionRow()}  
-                   
-                    
+
+                    <div className='column is-half is-offset-one-quarter'>
+                        { imageURL ? <img src={imageURL}/> : null }
+                    </div>
+
+                    <div className='column is-12 should-scroll-x'>
+                        { content }
+                    </div>
                 </div>
-                
-            </div >
+            </div>
         );
     }
 }
